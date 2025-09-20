@@ -1,0 +1,20 @@
+def calculate_grade(marks):
+    """Calculate grade based on marks"""
+    if marks >= 90 and marks <= 100:
+        return "A"
+    elif marks >= 80 and marks < 90:
+        return "B"
+    elif marks >= 70 and marks < 80:
+        return "C"
+    elif marks >= 60 and marks < 70:
+        return "D"
+    elif marks >= 0 and marks < 60:
+        return "Failed"
+    else:
+        return "Invalid marks! Please enter between 0-100."
+
+marks = float(input("Enter your marks (0-100): "))
+
+grade = calculate_grade(marks)
+
+print(f"Your grade is: {grade}")
