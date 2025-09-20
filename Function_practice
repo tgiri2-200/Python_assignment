@@ -1,0 +1,31 @@
+def place_info(city, landmark):
+    print(f"{city}: Visit {landmark}")
+
+def show_attractions(*places):
+    print(f"Attractions: {', '.join(places)}")
+
+def visitor_info(**details):
+    print("Visitor details:", details)
+
+def trip_plan(city, *places, **info):
+    print(f"\n{city} Trip:")
+    show_attractions(*places)
+    visitor_info(**info)
+
+print("=== 1. Keyword Arguments ===")
+place_info(city="Paro", landmark="Tiger's Nest")
+place_info(landmark="Punakha Dzong", city="Punakha")
+
+print("\n=== 2. *Args (Variable Arguments) ===")
+show_attractions("Tiger's Nest", "Punakha Dzong", "Buddha Point")
+show_attractions("Dochula Pass", "National Museum")
+
+print("\n=== 3. **Kwargs (Keyword Arguments) ===")
+visitor_info(name="Karma", days=5, guide=True)
+visitor_info(visitor="Sarah", experience="Amazing", food="Ema Datshi")
+
+print("\n=== 4. Combined Usage ===")
+trip_plan("Thimphu", "Tashichho Dzong", "Buddha Point", "Memorial Chorten", 
+          duration="2 days", hotel="Taj Tashi")
+trip_plan("Bumthang", "Jakar Dzong", "Kurjey Lhakhang", "Cheese Factory",
+          famous_for="Swiss Cheese", season="Autumn")
