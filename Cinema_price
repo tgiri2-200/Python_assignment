@@ -1,1 +1,13 @@
-
+age = int(input("Enter your age: "))
+if age < 12:
+    price = 300          
+elif 12 <= age <= 17:
+    price = 500         
+elif 18 <= age <= 59:
+    price = 800          
+else:
+    price = 400
+today = datetime.datetime.today().strftime('%A')  
+if today == "Wednesday":
+    price -= 100
+print(f"Your ticket price is {price}")
